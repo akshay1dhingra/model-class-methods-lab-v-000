@@ -6,7 +6,7 @@ class Captain < ActiveRecord::Base
   end
   
   def self.sailors 
-    self.includes(boats: :classifications).where("classifications.name = 'Sailor').uniq
+    self.includes(boats: :classifications).where("classifications.name = 'Sailor'").uniq
   end 
   
 end
